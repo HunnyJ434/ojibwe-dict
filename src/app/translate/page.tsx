@@ -8,7 +8,7 @@ const Page = async () => {
 
   const handleClick = async (inputString:any) => {
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/process_data', { input_string: inputString });
+      const response = await axios.post('https://folkloric-pier-410902.ue.r.appspot.com/api/process_data', { input_string: inputString });
       const resultWords = response.data.result_string.split(' '); // Split the string into an array of words
       const Word = resultWords.length > 0 ? resultWords[0] : ''; // Get the first word
       return Word

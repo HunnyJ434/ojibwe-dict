@@ -101,7 +101,7 @@
 
 import keras
 # Load the model
-loaded_model = keras.models.load_model('trained_model.h5')
+loaded_model = keras.models.load_model('ojib-eng.h5')
 
 # Display the model summary
 
