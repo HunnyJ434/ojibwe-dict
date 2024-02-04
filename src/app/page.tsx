@@ -19,12 +19,17 @@ const inter = Inter({ subsets: ['latin'] })
 
     
   }
-export default async function Home() {
+  
+  async function Home() {
   const EngOjib = await getData(0)
   const OjibEng = await getData(2)
+  useEffect(() => {
+
+  },)
   return (
     <main className={`${inter.className} flex min-h-screen flex-col items-center justify-between px-10`}>
       <Content EngOjib={EngOjib} OjibEng={OjibEng}/>
     </main>
   )
 }
+export default Home

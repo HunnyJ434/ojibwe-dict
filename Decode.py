@@ -99,9 +99,9 @@
 # AIxD+pIfqOw23VLVXfHs4XbAIdLW0RjY9wmKVaV0am9X4gg+l47lXSdE+PPVZLKh06Z+0Iz+ToTRPO1DrAjYag==
 
 
-import keras
+from tensorflow.keras.models import load_model
 # Load the model
-loaded_model = keras.models.load_model('ojib-eng.h5')
+loaded_model = load_model('ojib-eng.h5')
 
 # Display the model summary
 
@@ -168,7 +168,8 @@ def process_data():
     print("Final Decoded sentence:", decoded_sentence)
     # Perform some processing in your Python function
     result_string = decoded_sentence
-    return jsonify({'result_string': result_string})
+    return jsonify({'result_string': result_string,
+                    })
 
 
 if __name__ == '__main__':

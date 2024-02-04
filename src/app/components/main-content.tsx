@@ -17,6 +17,7 @@ export const Content = (props:any) => {
         -1,-1,-1,-1,-1,-1])
 	
 	const handleSearch =(value:any) =>{
+		
 		if(value != ""){
 			setSearchingKey(true)
 		}
@@ -24,17 +25,15 @@ export const Content = (props:any) => {
 			setSearchingKey(false)
 		}
 		const findNewKeys = (key:String) => {
-			if (key.includes(value)){
+			if (key.includes(value.toUpperCase())){
 				return key
 			}
 		}
-		const newKeys = Object.keys(mainData).sort().filter(findNewKeys)
+		let newKeys = Object.keys(mainData).sort().filter(findNewKeys)
+		console.log(newKeys)
 		setKeys(newKeys)
 	}
 
-	const handleBtnClick = (value:any) => {
-		setActiveBtn(value)
-	}
 
 	return (
 		<div>
